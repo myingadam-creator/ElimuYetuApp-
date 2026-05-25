@@ -13,4 +13,6 @@
            uses: actions/upload-artifact@v4
            with:
              name: ElimuYetuApp-APK
-             path: bin/*.apk
+             path: bin/*.apk 
+
+             
