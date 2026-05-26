@@ -44,6 +44,11 @@ jobs:
           yes | sdkmanager --licenses
           sdkmanager "platforms;android-33" "build-tools;37.0.0" "platform-tools"
 
+      - name: Force Buildozer to Use Our SDK
+        run: |
+          echo "android.sdk_path = $HOME/android-sdk" >> buildozer.spec
+          echo "android.ndk_path = $HOME/android-sdk/ndk" >> buildozer.spec
+
       - name: Build APK
         run: |
           export ANDROID_HOME=$HOME/android-sdk
